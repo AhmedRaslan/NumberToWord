@@ -16,12 +16,15 @@ namespace ConsoleApplication2
             string[] c = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
             string[] d = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
 
-        Restart: num = Convert.ToInt32(Console.ReadLine());
+        Restart: Console.Write("Your number : ");
+            num = Convert.ToInt32(Console.ReadLine());
             if (num > 999 || num < 0)
             {
                 Console.WriteLine("Enter a number from 0 to 999 !");
                 goto Restart;
             }
+
+            Console.WriteLine("-----------------");
 
             // For numbers less than 10
             if (num.ToString().Length == 1)
